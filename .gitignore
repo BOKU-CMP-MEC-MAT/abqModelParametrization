@@ -1,2 +1,7 @@
 *.env
 __py*
+*.rpy*
+*.inp
+*.rec
+*.log
+

@@ -32,8 +32,6 @@ class AbaqusModelFactory:
         self.dataBaseName = dataBaseName
         self.mdb = Mdb(pathName= dataBaseName)
 
-
-
     def createAbaqusModel(self, model: GeometryModel):
         self.mdb.Model(name = model.name, modelType = STANDARD_EXPLICIT)
         self.__createPlate(model)
@@ -49,6 +47,8 @@ class AbaqusModelFactory:
         self.__createInstances(model)
         self.__createEssentialBoundaries(model)
         self.__createEmbeddedRegions(model)
+        self.__createJob(model)
+        self.__addIncludeFile(model)
 
     def __createPlate(self, model: GeometryModel):
         s = self.mdb.models[model.name].ConstrainedSketch(name='plateSketch',
@@ -239,8 +239,6 @@ class AbaqusModelFactory:
         self.mdb.models[model.name].keywordBlock.synchVersions(storeNodesAndElements=False)
         self.mdb.models[model.name].keywordBlock.insert(0, f"*include, input=materials.inc")
 
-
-        
     #====================================================================================
 
     def createLoadStep(self, model: GeometryModel,

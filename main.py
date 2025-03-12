@@ -1,20 +1,20 @@
 from abq.AbaqusModelFactory import *
-#from geom.GeometryPart import *
-#from geom.GeometryModel import *
-#from geom.GeometryAssembly import *
+#from geo.GeometryPart import *
+#from geo.GeometryModel import *
+#from geo.GeometryAssembly import *
 import numpy as np
 import matplotlib.pyplot as plt
 
 caeName = "PlateWithRebar"
 factory = AbaqusModelFactory(caeName)
 
-w = 5000
-l = 5000
-t = 250
+w = 1000
+l = 1000
+t = 100
 holeDiameter = 250
-rebarDiameter = 16
-meshSizePlate = 50
-meshSizeRebar = 50
+rebarDiameter = 10
+meshSizePlate = 25
+meshSizeRebar = 25
 spacingRebars = 100
 pressure=10
 
@@ -25,8 +25,8 @@ cyRange = (-l/2 + holeDiameter/2 + Plate.MIN_DISTANCE_TO_EDGE,
            l/2 - holeDiameter/2 - Plate.MIN_DISTANCE_TO_EDGE)
 
 
-for cx in np.arange(cxRange[0], cxRange[1]+1, 800):
-    for cy in np.arange(cyRange[0], cyRange[1]+1, 800):
+for cx in np.arange(cxRange[0], cxRange[1]+1, 200):
+    for cy in np.arange(cyRange[0], cyRange[1]+1, 200):
         modelName = f"model_{int(cx)}_{int(cy)}"
         print(modelName)
         plateSection = GeometrySection(sectionName="secPlate",
@@ -71,10 +71,12 @@ for cx in np.arange(cxRange[0], cxRange[1]+1, 800):
         assembly = GeometryAssembly(plate=plate,
                                     rebars=rebars,
                                     spacing=spacingRebars)
+
         model = GeometryModel(modelName=modelName,
                               plate=plate,
                               rebars=rebars,
                               assembly=assembly)
+
         factory.createAbaqusModel(model=model)
         factory.createLoadStep(model=model,
                                stepName="Load",
@@ -89,12 +91,9 @@ for cx in np.arange(cxRange[0], cxRange[1]+1, 800):
                           frequency=1,
                           variables=('S', 'MISES', 'E', 'PE','PEEQ', 'PEMAG', 'LE', 'U','RF'))
 
-        #factory.writeInput(model=model)
+        factory.writeInput(model=model)
 
-
-
-
-        #print(model)
+#factory.saveMdb()
 
         #figure, axes = plt.subplots()
         #for i in model.assembly.instances:
