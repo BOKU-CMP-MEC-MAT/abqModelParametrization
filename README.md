@@ -5,15 +5,16 @@ This script serves as a reference for creating parameterized models in Abaqus. I
 The plate is fixed on the left side as an essential boundary condition and loaded by a uniform pressure applied to the top surface.
 
 ---
-**Note**  
-The **"geo"** folder contains the code responsible for parametrization, logic, and geometry definition, while the **"abq"** folder contains the code for generating the corresponding Abaqus model.  
-  
-**Workflow:**  
-1. A geometry model is created using the code in the **"geo"** folder.  
-2. This model is then passed to the **AbaqusModelFactory** in the **"abq"** folder.  
-3. The factory generates the corresponding Abaqus model.  
+> **Note**  
+> The **"geo"** folder contains the code responsible for parametrization, logic, and geometry definition, while the **"abq"** folder contains the code for generating the corresponding Abaqus model.  
+>  
+> **Workflow:**  
+> 1. A geometry model is created using the code in the **"geo"** folder.  
+> 2. This model is then passed to the **AbaqusModelFactory** in the **"abq"** folder.  
+> 3. The factory generates the corresponding Abaqus model.  
+>
+> Since the geometry is defined separately, Abaqus licenses are only required for the final model creation in the **AbaqusModelFactory**.  
 
-Since the geometry is defined separately, Abaqus licenses are only required for the final model creation in the **AbaqusModelFactory**.  
 ---
 
 ### Adjustable Parameters  
