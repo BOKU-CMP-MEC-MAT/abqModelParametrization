@@ -141,7 +141,7 @@ class GeometryAssembly:
             for i in range(1,nY_middle):
                 self.instances.append(GeometryInstance(instanceName=f"i_rebarYTop_Middle_{i}",
                                                    part=rebars["rebarYTop"],
-                                                   positionCenter=(rY_holeLeft + i*s_yMiddle, rYTop_Y, self.zPositionRebarsX)))
+                                                   positionCenter=(rY_holeLeft + i*s_yMiddle, rYTop_Y, self.zPositionRebarsY)))
                 self.instances.append(GeometryInstance(instanceName=f"i_rebarYBottom_Middle_{i}",
                                                    part=rebars["rebarYBottom"],
-                                                   positionCenter=(rY_holeLeft + i*s_yMiddle, rYBottom_Y, self.zPositionRebarsX)))
+                                                   positionCenter=(rY_holeLeft + i*s_yMiddle, rYBottom_Y, self.zPositionRebarsY)))
