@@ -4,4 +4,10 @@ __py*
 *.inp
 *.rec
 *.log
+*.dat
+*.msg
+*.odb
+*.sta
+*.prt
+*.com
 
