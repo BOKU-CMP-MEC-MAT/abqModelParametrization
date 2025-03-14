@@ -35,6 +35,6 @@ abaqus cae noGUI=main.py
 ```
 
 ## Created by:
-**Thomas Mader**
-[https://github.com/maderthomas](https://github.com/maderthomas)
+**Thomas Mader**<br>
+[https://github.com/maderthomas](https://github.com/maderthomas)<br>
 [thomas.mader@boku.ac.at](mailto:thomas.mader@boku.ac.at)
