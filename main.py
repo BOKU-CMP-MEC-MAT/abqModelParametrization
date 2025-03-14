@@ -25,8 +25,8 @@ cyRange = (-l/2 + holeDiameter/2 + Plate.MIN_DISTANCE_TO_EDGE,
            l/2 - holeDiameter/2 - Plate.MIN_DISTANCE_TO_EDGE)
 
 
-for cx in np.arange(cxRange[0], cxRange[1]+1, 200):
-    for cy in np.arange(cyRange[0], cyRange[1]+1, 200):
+for cx in np.arange(cxRange[0], cxRange[1]+1, 50):
+    for cy in np.arange(cyRange[0], cyRange[1]+1, 50):
         modelName = f"model_{int(cx)}_{int(cy)}"
         print(modelName)
         plateSection = GeometrySection(sectionName="secPlate",

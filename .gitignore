@@ -1,3 +1,6 @@
+*run*
+*eps*
+*Mac*
 *.env
 __py*
 *.rpy*
@@ -10,4 +13,8 @@ __py*
 *.sta
 *.prt
 *.com
+*out*
+*png*
+*.sh
+*ffm*
 

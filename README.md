@@ -4,6 +4,8 @@ This script serves as a reference for creating parameterized models in Abaqus. I
 
 The plate is fixed on the left side as an essential boundary condition and loaded by a uniform pressure applied to the top surface.
 
+![plateGif](./gif/param.gif)
+
 > **Note**  
 > The **"geo"** folder contains the code responsible for parametrization, logic, and geometry definition, while the **"abq"** folder contains the code for generating the corresponding Abaqus model.  
 >  
