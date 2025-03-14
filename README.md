@@ -34,7 +34,7 @@ Run the following command:
 abaqus cae noGUI=main.py  
 ```
 
-## Created by:
+## Created by
 **Thomas Mader**<br>
 [https://github.com/maderthomas](https://github.com/maderthomas)<br>
 [thomas.mader@boku.ac.at](mailto:thomas.mader@boku.ac.at)
