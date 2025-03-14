@@ -33,7 +33,8 @@ Run the following command:
 ```bash
 abaqus cae noGUI=main.py  
 ```
+
 ## Created by:
 **Thomas Mader**
-[Mein GitHub](https://github.com/maderthomas)
-[Schreib mir eine E-Mail](mailto:thomas.mader@boku.ac.at)
+[https://github.com/maderthomas](https://github.com/maderthomas)
+[thomas.mader@boku.ac.at](mailto:thomas.mader@boku.ac.at)
