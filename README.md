@@ -32,3 +32,8 @@ Navigate to **File** → **Run Script...** → **main.py**
 Run the following command:  
 ```bash
 abaqus cae noGUI=main.py  
+```
+## Created by:
+**Thomas Mader**
+[Mein GitHub](https://github.com/maderthomas)
+[Schreib mir eine E-Mail](mailto:thomas.mader@boku.ac.at)
